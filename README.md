@@ -1,2 +1,0 @@
-# challengers
-challenges of algorithms
