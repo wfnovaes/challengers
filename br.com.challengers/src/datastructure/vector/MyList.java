@@ -31,11 +31,7 @@ public class MyList<T> extends Structure<T> {
     }
 
     public void remove(int index) {
-        validadeIndex(index);
-        for (int i = index; i < this.size; i++) {
-            this.elements[i] = this.elements[i+1];
-        }
-        this.size --;
+        super.remove(index);
     }
 
     public int lastIndexOf(T element) {

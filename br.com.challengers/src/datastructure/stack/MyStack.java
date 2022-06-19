@@ -18,7 +18,9 @@ public class MyStack<T> extends Structure<T> {
 
     public T pop() {
         if (isEmpty()) return null;
-        return this.elements[--size];
+        T element = this.elements[this.size - 1];
+        remove(this.size-1);
+        return element;
     }
 
     public T peek() {

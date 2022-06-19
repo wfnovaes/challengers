@@ -39,6 +39,14 @@ public abstract class Structure<T> {
         this.elements[this.size++] = item;
     }
 
+    protected void remove(int index) {
+        validadeIndex(index);
+        for (int i = index; i < this.size; i++) {
+            this.elements[i] = this.elements[i+1];
+        }
+        this.size --;
+    }
+
     protected void validadeIndex(int index) {
         if (index < 0 && index >= this.size ) throw new IndexOutOfBoundsException("Invalid Position");
     }
